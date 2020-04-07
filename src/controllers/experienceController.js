@@ -2,7 +2,7 @@ const conn = require('../database/connection');
 module.exports = {
 
     async get(request,response){
-        const {page = 1, limit = 5 } = request.query;
+        const {page = 1, limit = 10 } = request.query;
 
         const [count] = await conn('experience').count();
 
@@ -19,10 +19,10 @@ module.exports = {
     },
 
     async create(request,response) {
-        const { company, actvities, start, end } = request.body;
+        const { company, role, activities, start, end } = request.body;
 
     await conn('experience').insert({
-        company, actvities, start, end,
+        company, activities, start, end, role
     });
     return response.json({id:1});
     },

@@ -11,15 +11,15 @@ module.exports = {
   //     directory:'./src/database/migrations'
   //   },
   //   useNullAsDefault: true,
-  // },
+  // }, mysql://:@us-cdbr-iron-east-01.cleardb.net/heroku_08d4ab31bc72db3?reconnect=true
 
   development: {
     client: 'mysql',
     connection: {
-      host:'127.0.0.1',
-      database: 'cv-online',
-      user:     'root',
-      password: 'root'
+      host:     'us-cdbr-iron-east-01.cleardb.net',//'127.0.0.1',
+      database: 'heroku_08d4ab31bc72db3',//'cv-online',
+      user:     'b0b3a9414f2de7',//'root',
+      password: 'af5801b1',//'root'
     },
     migrations:{
       tableName: 'knex_migrations',

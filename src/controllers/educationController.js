@@ -7,12 +7,12 @@ module.exports = {
     },
     
     async create(request,response) {
-        const { description, obs, start, end } = request.body;
+        const { school, degree, description, activities, obs, start, end } = request.body;
 
-    await conn('education').insert({
-        description, obs, start, end,
-    });
-    return response.json({id:1});
+        await conn('education').insert({
+            school, degree, description, activities, obs, start, end
+        });
+        return response.json({id:1});
     },
 
     async delete(request,response){
