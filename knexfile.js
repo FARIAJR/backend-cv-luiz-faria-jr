@@ -2,16 +2,16 @@
 
 module.exports = {
 
-  // development: {
-  //   client: 'sqlite3',
-  //   connection: {
-  //     filename: './src/database/db.sqlite'
-  //   },
-  //   migrations:{
-  //     directory:'./src/database/migrations'
-  //   },
-  //   useNullAsDefault: true,
-  // }, mysql://:@us-cdbr-iron-east-01.cleardb.net/heroku_08d4ab31bc72db3?reconnect=true
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: './src/database/db-test.sqlite'
+    },
+    migrations:{
+      directory:'./src/database/migrations'
+    },
+    useNullAsDefault: true,
+  }, //mysql://:@us-cdbr-iron-east-01.cleardb.net/heroku_08d4ab31bc72db3?reconnect=true
 
   development: {
     client: 'mysql',
